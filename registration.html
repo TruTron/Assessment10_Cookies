@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Capella Volunteers - Home</title>
+    <link rel="stylesheet" href="css/styles.wk09.css">
+</head>
+<body>
+<div class="top">
+    <a class="logo" href="registration.html">CapellaVolunteers<span class="org">.org</span></a>
+</div>
+<nav>
+    <ul>
+        <!-- Links won't all work for week 9 -->
+        <li><a href="registration.html">Home</a></li>
+        <li><a href="registration.html">Invitation</a></li>
+        <li><a href="registration.html">Volunteers</a></li>
+        <li><a href="registration.html">Gallery</a></li>
+        <li><a href="registration.html">Registration</a></li>
+    </ul>
+</nav>
+<main id="form-container">
+    <!-- Form's action set to # as part of the process to prevent form submission -->
+    <form action="#" id="reg-form" class="registration-form">
+        <label id="reg-username-label" for="reg-username-input">User Name:</label>
+        <!-- Regular expression to accept letter and digits with minimum 3 chars - Required -->
+        <input type="text" id="reg-username-input" placeholder="Username (required, 3 char. min.)" 
+               pattern="[a-zA-Z0-9]{3,}" required>
+        <label id="reg-password-label" for="reg-password-input">Password:</label>
+        <!-- Password field required with minimum 8 chars -->
+        <input type="password" id="reg-password-input" placeholder="Password (8 char. min.)" minlength="8" required>
+        <label id="reg-password-verify-label" for="reg-password-verify-input">Password Verify:</label>
+        <!-- Verify password field required with minimum 8 chars -->
+        <input type="password" id="reg-password-verify-input" placeholder="Verify Password" minlength="8" required>
+        <label id="reg-first-name-label" for="reg-first-name-input">First Name:</label>
+        <!-- First Name field required -->
+        <input type="text" id="reg-first-name-input" placeholder="First Name (required)" required>
+        <label id="reg-last-name-label" for="reg-last-name-input">Last Name:</label>
+        <!-- Last Name field required -->
+        <input type="text" id="reg-last-name-input" placeholder="Last Name (required)" required>
+        <label id="reg-email-label" for="reg-email-input">Email:</label>
+        <!-- Regular expression to accept valid email address pattern - Required -->
+        <input type="email" id="reg-email-input" placeholder="Email Address (required)"
+                pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required>
+        <label id="reg-phone-label" for="reg-phone-input">Phone:</label>
+        <!-- Regular expression to accept valid phone number pattern - Optional -->
+        <input type="tel" id="reg-phone-input" placeholder="(xxx) xxx-xxxx (optional)"
+               pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+        <label id="reg-newsletter-label">Newsletter:</label>
+        <!-- Fieldset used to group radio buttons -->
+        <fieldset id="reg-newsletter-signup">
+            <legend>Newsletter Signup</legend>
+            <label for="newsletter-yes">Yes</label>
+            <input type="radio" name="newsletter" id="newsletter-yes" value="Yes" checked>
+            <label for="newsletter-no">No</label>
+            <input type="radio" name="newsletter" id="newsletter-no" value="No">
+        </fieldset>
+        <input type="submit" value="Register" id="reg-submit-button">
+        <div id="reg-result-message"></div>
+    </form>
+</main>
+
+<footer>rev. 2025 for work in IT3240</footer>
+<!-- Script should be loaded at the end of body -->
+<script src="js/registration.js"></script>
+</body>
+</html>
