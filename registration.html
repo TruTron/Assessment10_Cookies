@@ -20,8 +20,8 @@
     </ul>
 </nav>
 <main id="form-container">
-    <!-- Form's action set to # as part of the process to prevent form submission -->
-    <form action="#" id="reg-form" class="registration-form">
+    <!-- Form's action set to confirm.html for form submission -->
+    <form action="confirm.html" id="reg-form" class="registration-form">
         <label id="reg-username-label" for="reg-username-input">User Name:</label>
         <!-- Regular expression to accept letter and digits with minimum 3 chars - Required -->
         <input type="text" id="reg-username-input" placeholder="Username (required, 3 char. min.)" 
@@ -41,7 +41,7 @@
         <label id="reg-email-label" for="reg-email-input">Email:</label>
         <!-- Regular expression to accept valid email address pattern - Required -->
         <input type="email" id="reg-email-input" placeholder="Email Address (required)"
-                pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required>
+                pattern="^[a-zA-Z0-9._%+]+@[a-zA-Z0-9.]+\.[a-zA-Z]{2,}$" required>
         <label id="reg-phone-label" for="reg-phone-input">Phone:</label>
         <!-- Regular expression to accept valid phone number pattern - Optional -->
         <input type="tel" id="reg-phone-input" placeholder="(xxx) xxx-xxxx (optional)"
